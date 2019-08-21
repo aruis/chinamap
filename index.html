@@ -40,7 +40,7 @@
     var proj = d3.geo.mercator().center([105, 38]).scale(750).translate([width / 2, height / 2]);
     var path = d3.geo.path().projection(proj);
 
-    d3.json("https://raw.githubusercontent.com/aruis/chinamap/master/data/cn.json", function (error, cn) {
+    d3.json("data/cn.json", function (error, cn) {
         svg.append("g")
                 .attr("class", "states")
                 .selectAll("path")
